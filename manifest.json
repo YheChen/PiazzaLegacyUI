@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Piazza Legacy UI (Personal)",
+  "version": "0.1.0",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://piazza.com/class/*",
+        "https://www.piazza.com/class/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_start",
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["styles/*.css"],
+      "matches": ["https://piazza.com/*", "https://www.piazza.com/*"]
+    }
+  ]
+}

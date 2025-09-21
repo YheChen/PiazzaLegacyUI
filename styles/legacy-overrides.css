@@ -1,0 +1,206 @@
+/******** Piazza Legacyizer — NEW UI → legacy look ********/
+:root.piazza-legacyizer-active {
+  --plg-font: "Helvetica Neue", Arial, sans-serif;
+  --plg-size: 14px;
+  --plg-line: 1.35;
+
+  --plg-bg: #f6f7f8; /* page bg */
+  --plg-panel: #ffffff; /* card/panel bg */
+  --plg-text: #111827; /* main text */
+  --plg-muted: #6b7280; /* secondary text */
+  --plg-link: #1b6ac9; /* legacy-ish link blue */
+  --plg-link-hover: #1558a4;
+  --plg-border: #dcdfe3; /* soft grey border */
+  --plg-accent: #f5f7ff; /* hover row */
+
+  --plg-1: 4px;
+  --plg-2: 8px;
+  --plg-3: 12px;
+  --plg-4: 16px;
+  --plg-6: 24px;
+  --plg-radius: 4px;
+  --plg-z-header: 1000;
+
+  --rail-w: 260px;
+  --content-max: 860px;
+}
+
+/* Global */
+.piazza-legacyizer-active body {
+  font-family: var(--plg-font) !important;
+  font-size: var(--plg-size) !important;
+  line-height: var(--plg-line) !important;
+  color: var(--plg-text) !important;
+  background: var(--plg-bg) !important;
+}
+.piazza-legacyizer-active a {
+  color: var(--plg-link) !important;
+  text-decoration: none !important;
+}
+.piazza-legacyizer-active a:hover {
+  color: var(--plg-link-hover) !important;
+  text-decoration: underline !important;
+}
+.piazza-legacyizer-active h1,
+h2,
+h3 {
+  margin: var(--plg-2) 0 !important;
+}
+
+/* Header */
+.piazza-legacyizer-active .legacy-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--plg-z-header);
+  background: var(--plg-panel) !important;
+  border-bottom: 1px solid var(--plg-border) !important;
+  padding: var(--plg-2) var(--plg-4) !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Columns */
+.piazza-legacyizer-active .legacy-left-rail {
+  width: var(--rail-w) !important;
+  min-width: var(--rail-w) !important;
+  background: var(--plg-panel) !important;
+  border-right: 1px solid var(--plg-border) !important;
+}
+.piazza-legacyizer-active .legacy-right-rail {
+  display: none !important;
+}
+
+.piazza-legacyizer-active main,
+[data-test="main"] {
+  padding: var(--plg-4) !important;
+}
+
+/* Thread list */
+.piazza-legacyizer-active .legacy-thread-list {
+  background: var(--plg-panel) !important;
+  border: 1px solid var(--plg-border) !important;
+  border-radius: var(--plg-radius);
+  overflow: hidden;
+}
+.piazza-legacyizer-active .legacy-thread-row {
+  display: block;
+  padding: var(--plg-2) var(--plg-3) !important;
+  border-bottom: 1px solid var(--plg-border) !important;
+}
+.piazza-legacyizer-active .legacy-thread-row:hover {
+  background: var(--plg-accent) !important;
+}
+.piazza-legacyizer-active .legacy-thread-row .title,
+[data-test="title"] {
+  font-weight: 600 !important;
+}
+.piazza-legacyizer-active .legacy-thread-row .meta,
+[data-test="meta"] {
+  color: var(--plg-muted) !important;
+  font-size: 12px !important;
+}
+
+/* Thread content */
+.piazza-legacyizer-active .legacy-thread {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  background: var(--plg-panel) !important;
+  border: 1px solid var(--plg-border) !important;
+  border-radius: var(--plg-radius);
+  padding: var(--plg-4) !important;
+}
+.piazza-legacyizer-active .legacy-post-header {
+  border-bottom: 1px solid var(--plg-border) !important;
+  padding-bottom: var(--plg-2) !important;
+  margin-bottom: var(--plg-3) !important;
+}
+.piazza-legacyizer-active .legacy-post-meta {
+  color: var(--plg-muted) !important;
+  font-size: 12px !important;
+}
+
+/* Composer / editor */
+.piazza-legacyizer-active .legacy-composer {
+  background: var(--plg-panel) !important;
+  border: 1px solid var(--plg-border) !important;
+  border-radius: var(--plg-radius);
+  padding: var(--plg-3) !important;
+}
+.piazza-legacyizer-active textarea,
+.piazza-legacyizer-active input[type="text"],
+.piazza-legacyizer-active input[type="search"] {
+  font-family: var(--plg-font) !important;
+  font-size: var(--plg-size) !important;
+}
+
+/* Buttons */
+.piazza-legacyizer-active .legacy-button,
+.piazza-legacyizer-active button,
+.piazza-legacyizer-active [role="button"],
+.piazza-legacyizer-active .btn {
+  border-radius: 3px !important;
+  border: 1px solid var(--plg-border) !important;
+  background: #fafbfc !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+.piazza-legacyizer-active .legacy-button:hover,
+.piazza-legacyizer-active button:hover,
+.piazza-legacyizer-active [role="button"]:hover,
+.piazza-legacyizer-active .btn:hover {
+  background: #f0f3f7 !important;
+}
+
+/* Search */
+.piazza-legacyizer-active .legacy-search {
+  background: var(--plg-panel) !important;
+  border: 1px solid var(--plg-border) !important;
+  border-radius: var(--plg-radius);
+  padding: var(--plg-2) var(--plg-3) !important;
+}
+
+/* Tables / code in posts */
+.piazza-legacyizer-active table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  background: var(--plg-panel) !important;
+}
+.piazza-legacyizer-active th,
+.piazza-legacyizer-active td {
+  border: 1px solid var(--plg-border) !important;
+  padding: 6px 8px !important;
+}
+.piazza-legacyizer-active pre,
+.piazza-legacyizer-active code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+    monospace !important;
+  background: #f8fafc !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 3px !important;
+  padding: 2px 4px !important;
+}
+
+/* Density & gaps */
+.piazza-legacyizer-active [class*="stack"],
+.piazza-legacyizer-active [data-test*="stack"] {
+  gap: var(--plg-2) !important;
+}
+.piazza-legacyizer-active [data-test="answers"] > * + *,
+.piazza-legacyizer-active [data-test="comments"] > * + * {
+  border-top: 1px solid var(--plg-border) !important;
+  margin-top: var(--plg-3) !important;
+  padding-top: var(--plg-3) !important;
+}
+
+/* Make nested text inherit base color; keep meta subtle */
+.piazza-legacyizer-active * {
+  color: inherit;
+}
+.piazza-legacyizer-active .legacy-post-meta,
+.piazza-legacyizer-active .muted {
+  color: var(--plg-muted) !important;
+}
+
+/* Debug toggles (uncomment while tuning) */
+/*
+.piazza-legacyizer-active .legacy-thread-list,
+.piazza-legacyizer-active .legacy-thread { outline: 2px dashed #a78bfa !important; }
+*/
